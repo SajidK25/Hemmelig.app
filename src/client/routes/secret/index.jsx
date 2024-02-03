@@ -5,7 +5,6 @@ import { Button, Container, Group, Stack, Text, TextInput, Title } from '@mantin
 import {
     IconDownload,
     IconEye,
-    IconHeading,
     IconLock,
     IconPerspective,
     IconShieldLock,
@@ -175,7 +174,7 @@ const Secret = () => {
                     </Text>
                 )}
 
-                {title && <TextInput icon={<IconHeading size={14} />} value={title} readOnly />}
+                {title && <TextInput icon={<IconLock size={14} />} value={title} readOnly />}
 
                 {isSecretOpen && <Quill value={secret} secretId={secretId} readOnly />}
 
@@ -212,11 +211,7 @@ const Secret = () => {
 
                 <Group>
                     {!isSecretOpen && (
-                        <Button
-                            color="hemmelig"
-                            leftIcon={<IconEye size={14} />}
-                            onClick={fetchSecret}
-                        >
+                        <Button color="blue" leftIcon={<IconEye size={14} />} onClick={fetchSecret}>
                             {t('secret.view_secret')}
                         </Button>
                     )}

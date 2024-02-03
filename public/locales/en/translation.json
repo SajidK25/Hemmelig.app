@@ -20,8 +20,8 @@
         }
     },
     "home": {
-        "app_subtitle": "Paste a password, confidential message, or private data.",
-        "welcome": "Ensure your sensitive data remains encrypted, secure, and confidential.",
+        "app_subtitle": "Share your secret with the person on the other side so that only they can read it.",
+        "welcome": "Our server does not collect any information; everything is encrypted on the fly.",
         "bummer": "Bummer!",
         "maintxtarea": "Write your sensitive information..",
         "title": "Title",
@@ -43,8 +43,8 @@
         "decryption_key": "Decryption key",
         "create_new": "Create new",
         "delete": "Delete",
-        "link_only_works_once": "The secret link, by default, is a one-time use only, after which it will vanish.",
-        "app_name_meaning": "[he`m:(ə)li], means secret in Norwegian.",
+        "link_only_works_once": "The project is hosted on our own server, with full respect for the privacy of users.",
+        "app_name_meaning": "Every donation, no matter the size, makes a significant impact. Let's build something amazing together! Thank you for being a part of our community and supporting our vision.",
         "please_add_secret": "Please add a secret.",
         "14_days": "14 days",
         "28_days": "28 days",
@@ -58,7 +58,12 @@
         "5_minutes": "5 minutes",
         "successful_share": "Successful share",
         "get_your_secret": "Get your secret at hemmelig.app.",
-        "set_public": "Set as a public paste"
+        "set_public": "Set as a public paste",
+        "donation_bitcoin_acc": "bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q",
+        "donation_xmr_acc": "44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN",
+        "donation_eth_acc": "0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94",
+        "donation_thanks_txt": "🙌 Together, we make it happen! 🙌",
+        "donation_special_thanks": "Special thanks for providing ideas to Cyron."
     },
     "secret": {
         "view_your_secret": "View your secret",

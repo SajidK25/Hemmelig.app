@@ -3,12 +3,16 @@ export default `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Hemmelig.app - Paste a password, confidential message, or private data.</title>
+        <title> SilentSpeaker.org - Paste a password, confidential message, or private data.</title>
 
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./public/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./public/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./public/icons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./public/icons/amdroid-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./public/icons/amdroid-chrome-512x512.png">
 
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="./public/icons/favicon.ico">
+        <link rel="manifest" href="/site.webmanifest">
         <!-- Primary Meta Tags -->
         <meta name="title" content="Paste a password, confidential message, or private data." />
         <meta
