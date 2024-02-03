@@ -28,8 +28,8 @@ services:
             traefik.http.routers.hm.tls.options: "modern@file"
             traefik.http.routers.hm.tls: "true"
             traefik.http.services.hm.loadbalancer.server.port: 3000
-            traefik.http.services.hm.loadbalancer.sticky.cookie.httpOnly: "true"
-            traefik.http.services.hm.loadbalancer.sticky.cookie.secure: "true"
+            # traefik.http.services.hm.loadbalancer.sticky.cookie.httpOnly: "true"
+            # traefik.http.services.hm.loadbalancer.sticky.cookie.secure: "true"
         networks:
             - traefik-net
         ports:
