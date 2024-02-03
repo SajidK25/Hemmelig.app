@@ -42,5 +42,4 @@ services:
             retries: 1
 networks:
   traefik-net:
-    driver: overlay
     external: true 
