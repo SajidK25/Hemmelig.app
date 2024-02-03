@@ -1,6 +1,6 @@
 import logo from './nav-logo.png';
 const Logo = ({ ...rest }) => (
-    <img width={300} style={{ marginTop: '-10px' }} src={logo} alt="silenspeaker logo" />
+    <img width={160} src={logo} style={{ marginTop: '-38px' }} alt="website logo" />
 );
 
 export default Logo;

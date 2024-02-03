@@ -3,7 +3,7 @@ export default `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title> SilentSpeaker.org - Paste a password, confidential message, or private data.</title>
+        <title>Wordlock-og.xyz -Let's do some magic - share your secret and don't worry about any leaks of your information.</title>
 
         <link rel="apple-touch-icon" sizes="180x180" href="./public/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./public/icons/favicon-32x32.png">
@@ -14,10 +14,10 @@ export default `<!DOCTYPE html>
         <link rel="icon" href="./public/icons/favicon.ico">
         <link rel="manifest" href="/site.webmanifest">
         <!-- Primary Meta Tags -->
-        <meta name="title" content="Paste a password, confidential message, or private data." />
+        <meta name="title" content="Let's do some magic - share your secret and don't worry about any leaks of your information." />
         <meta
             name="description"
-            content="Ensure your sensitive data remains encrypted, secure, and confidential."
+            content="Our server does not collect any information; everything is encrypted on the fly."
         />
 
         <!-- Open Graph / Facebook -->
@@ -25,11 +25,11 @@ export default `<!DOCTYPE html>
         <meta property="og:url" content="https://www.hemmelig.app/" />
         <meta
             property="og:title"
-            content="Paste a password, confidential message, or private data."
+            content="Let's do some magic - share your secret and don't worry about any leaks of your information."
         />
         <meta
             property="og:description"
-            content="Ensure your sensitive data remains encrypted, secure, and confidential."
+            content="Our server does not collect any information; everything is encrypted on the fly."
         />
         <meta property="og:image" content="/icons/icon-512x512.png" />
 
@@ -38,11 +38,11 @@ export default `<!DOCTYPE html>
         <meta property="twitter:url" content="https://www.hemmelig.app/" />
         <meta
             property="twitter:title"
-            content="Paste a password, confidential message, or private data."
+            content="Let's do some magic - share your secret and don't worry about any leaks of your information."
         />
         <meta
             property="twitter:description"
-            content="Ensure your sensitive data remains encrypted, secure, and confidential."
+            content="Our server does not collect any information; everything is encrypted on the fly."
         />
         <meta property="twitter:image" content="/icons/icon-512x512.png" />
 

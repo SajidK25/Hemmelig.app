@@ -211,7 +211,11 @@ const Secret = () => {
 
                 <Group>
                     {!isSecretOpen && (
-                        <Button color="blue" leftIcon={<IconEye size={14} />} onClick={fetchSecret}>
+                        <Button
+                            color="violet"
+                            leftIcon={<IconEye size={14} />}
+                            onClick={fetchSecret}
+                        >
                             {t('secret.view_secret')}
                         </Button>
                     )}
@@ -232,7 +236,7 @@ const Secret = () => {
 
                     {isSecretOpen && (
                         <Button
-                            color="hemmelig"
+                            color="violet"
                             leftIcon={<IconSquarePlus size={14} />}
                             component={Link}
                             to="/"

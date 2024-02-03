@@ -41,7 +41,7 @@ const ApplicationShell = () => {
             }
             header={
                 <Header
-                    height={75}
+                    height={90}
                     style={{ zIndex: 100 }}
                     p="xs"
                     sx={(theme) => ({

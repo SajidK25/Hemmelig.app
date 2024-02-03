@@ -292,7 +292,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size={`${isMobile ? '1.0rem' : 'h3'}`} align="center">
+                    <Title order={1} size={`${isMobile ? '1.0rem' : 'h1'}`} align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -563,7 +563,7 @@ const Home = () => {
                     <Group position="right" grow={isMobile}>
                         {!secretId && (
                             <Button
-                                color="blue"
+                                color="violet"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 loading={creatingSecret}
                                 type="submit"
@@ -574,7 +574,7 @@ const Home = () => {
 
                         {secretId && (
                             <Button
-                                color="blue"
+                                color="violet"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 onClick={onNewSecret}
                             >
@@ -602,10 +602,8 @@ const Home = () => {
             <Stack spacing="xs">
                 <Text size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
-                </Text>
-
-                <Text size={primaryFontStyle} align="center">
-                    <strong>SilentSpeaker</strong>, {t('home.app_name_meaning')}
+                    <Text align="center">Nothing is stored on our server. So sleep well 🧡</Text>
+                    <strong>WordLock</strong>, {t('home.app_name_meaning')}
                 </Text>
             </Stack>
             <Stack spacing="0" pt="xs">
