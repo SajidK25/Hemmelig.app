@@ -10,7 +10,7 @@ services:
         environment:
             - SECRET_LOCAL_HOSTNAME=0.0.0.0 # The local hostname for the fastify instance
             - SECRET_PORT=3000 # The port number for the fastify instance
-            - SECRET_HOST=!changeme! # Used for i.e. set cors/cookies to your domain name
+            - SECRET_HOST=test.silentspeaker.org # Used for i.e. set cors/cookies to your domain name
             - SECRET_ROOT_USER=groot # User as the root admin user
             - SECRET_ROOT_PASSWORD=iamroot # The admin user password (change this after signed in)
             - SECRET_ROOT_EMAIL=groot@hemmelig.app # The email for the admin user
