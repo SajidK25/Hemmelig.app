@@ -22,7 +22,7 @@ services:
             traefik.docker.network: "traefik-net"
             traefik.enable: "true"
             traefik.http.routers.hm.entrypoints: "https"
-            traefik.http.routers.hm.middlewares: "default@file"
+            # traefik.http.routers.hm.middlewares: "default@file"
             traefik.http.routers.hm.rule: "Host(`${PROJECT_DOMAIN}`)"
             traefik.http.routers.hm.tls.certresolver: "letsEncrypt"
             # traefik.http.routers.hm.tls.options: "modern@file"
