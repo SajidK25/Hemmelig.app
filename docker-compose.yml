@@ -19,19 +19,17 @@ services:
             - SECRET_JWT_SECRET=!changeme! # Override this for the secret signin JWT tokens for log in
             - SECRET_MAX_TEXT_SIZE=256 # The max text size for the secret. Is set in kb. i.e. 256 for 256kb
         labels:
-            - "traefik.enable=true"
-            - "traefik.docker.network=traefik-net"
-            - "traefik.http.middlewares.wwwtohttps.redirectregex.regex=^https?://www\\.(.+)"
-            - "traefik.http.middlewares.wwwtohttps.redirectregex.replacement=https://$${1}"
-            - "traefik.http.middlewares.wwwtohttps.redirectregex.permanent=true"
-            - "traefik.http.routers.hm-insecure.rule=Host(`test.silentspeaker.org`) || Host(`www.test.silentspeaker.org`)"
-            - "traefik.http.routers.hm-insecure.entrypoints=web"
-            - "traefik.http.middlewares.hm-redirect-web-secure.redirectscheme.scheme=https"
-            - "traefik.http.routers.hm-insecure.middlewares=hm-redirect-web-secure,wwwtohttps"
-            - "traefik.http.routers.hm.rule=Host(`test.silentspeaker.org`) || Host(`www.test.silentspeaker.org`)"
-            - "traefik.http.routers.hm.entrypoints=websecure"
-            - "traefik.http.routers.hm.tls=true"
-            - "traefik.http.routers.hm.tls.certresolver=myresolver"
+            traefik.docker.network: "traefik-net"
+            traefik.enable: "true"
+            traefik.http.routers.hm.entrypoints: "https"
+            traefik.http.routers.hm.middlewares: "default@file"
+            traefik.http.routers.hm.rule: "Host(`${PROJECT_DOMAIN}`)"
+            traefik.http.routers.hm.tls.certresolver: "letsEncrypt"
+            traefik.http.routers.hm.tls.options: "modern@file"
+            traefik.http.routers.hm.tls: "true"
+            traefik.http.services.hm.loadbalancer.server.port: 3000
+            # traefik.http.services.hm.loadbalancer.sticky.cookie.httpOnly: "true"
+            # traefik.http.services.hm.loadbalancer.sticky.cookie.secure: "true"
 
         networks:
             - traefik-net
