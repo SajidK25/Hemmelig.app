@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import AdminShell from './admin-shell.jsx';
 import ApplicationShell from './app-shell.jsx';
 
 const Home = lazy(() => import('./routes/home'));
@@ -22,6 +21,7 @@ const UserAccount = lazy(() => import('./routes/account/account'));
 const appRouter = createBrowserRouter(
     createRoutesFromElements(
         <>
+            <Route path="*" element={<div style={{ width: '100%', height: '100%' }}></div>} />
             <Route path="/" element={<ApplicationShell />}>
                 <Route index element={<Home />} />
                 <Route path="secret/:encryptionKey/:secretId" element={<Secret />} />
@@ -44,21 +44,6 @@ const appRouter = createBrowserRouter(
                         return await getPublicSecrets(params?.username);
                     }}
                 />
-                <Route path="signin" element={<SignIn />} />
-                <Route path="signup" element={<SignUp />} />
-                <Route path="signout" element={<SignOut />} />
-                <Route path="privacy" element={<Privacy />} />
-                <Route path="terms" element={<Terms />} />
-            </Route>
-            <Route path="/account" element={<AdminShell />}>
-                <Route index element={<Account />} />
-                <Route path="account" element={<Account />} />
-                <Route path="secrets" element={<Secrets />} />
-                <Route path="instance-settings" element={<Settings />} />
-                <Route path="account-settings" element={<UserAccount />} />
-                <Route path="users" element={<Users />} />
-                <Route path="privacy" element={<Privacy />} />
-                <Route path="terms" element={<Terms />} />
             </Route>
         </>
     )

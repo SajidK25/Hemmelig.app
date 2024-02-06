@@ -7,7 +7,6 @@ import {
     Container,
     CopyButton,
     Divider,
-    FileButton,
     Group,
     NumberInput,
     Select,
@@ -22,7 +21,6 @@ import { useMediaQuery } from '@mantine/hooks';
 import {
     IconCheck,
     IconCopy,
-    IconHeading,
     IconLink,
     IconLock,
     IconLockAccess,
@@ -47,6 +45,10 @@ import config from '../../config';
 
 import style from './style.module.css';
 
+import BitcoinIcon from '../../components/icons/BitcoinIcon';
+import ETHIcon from '../../components/icons/ETHIcon';
+import XMRIcon from '../../components/icons/XMRIcon';
+import Cyronlogowithoutbackground from './Cyronlogowithoutbackground.png';
 const DEFAULT_TTL = 259200; // 3 days - 72 hours
 
 const Home = () => {
@@ -80,6 +82,8 @@ const Home = () => {
     const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
     const { t } = useTranslation();
+
+    const primaryFontStyle = `${isMobile ? '0.775rem' : 'sm'}`;
 
     useEffect(() => {
         if (secretId) {
@@ -288,7 +292,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size="h2" align="center">
+                    <Title order={1} size={`${isMobile ? '1.0rem' : 'h3'}`} align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -308,7 +312,7 @@ const Home = () => {
                     <Group grow>
                         <TextInput
                             styles={groupMobileStyle}
-                            icon={<IconHeading size={14} />}
+                            icon={<IconLock size={14} />}
                             placeholder={t('home.title')}
                             readOnly={inputReadOnly}
                             {...form.getInputProps('title')}
@@ -395,40 +399,6 @@ const Home = () => {
                                 {...form.getInputProps('allowedIp')}
                             />
                         </Tooltip>
-                    </Group>
-
-                    <Group grow>
-                        <Checkbox
-                            styles={groupMobileStyle}
-                            checked={isPublic}
-                            onChange={onSetPublic}
-                            readOnly={inputReadOnly}
-                            color="hemmelig"
-                            label={t('home.set_public')}
-                        />
-
-                        <FileButton
-                            disabled={disableFileUpload}
-                            styles={groupMobileStyle}
-                            multiple
-                            {...form.getInputProps('files')}
-                        >
-                            {(props) => (
-                                <Button
-                                    {...props}
-                                    label={disableFileUpload ? t('home.upload_files') : ''}
-                                    color={disableFileUpload ? 'gray' : 'hemmelig-orange'}
-                                >
-                                    {t('home.upload_files')}
-                                </Button>
-                            )}
-                        </FileButton>
-
-                        {disableFileUpload && (
-                            <Text size="sm" align="center" mt="sm">
-                                {isPublic ? t('home.public_no_upload') : t('home.login_to_upload')}
-                            </Text>
-                        )}
                     </Group>
 
                     {form.values.files?.length > 0 && (
@@ -573,7 +543,9 @@ const Home = () => {
                             <Button
                                 styles={() => ({
                                     root: {
-                                        backgroundColor: 'var(--color-contrast-second)',
+                                        backgroundImage:
+                                            'linear-gradient(45deg,#00ff15 0%, #7f00ff 80% )',
+                                        border: 'none',
                                         '&:hover': {
                                             backgroundColor: 'var(--color-contrast-second)',
                                             filter: 'brightness(115%)',
@@ -591,7 +563,7 @@ const Home = () => {
                     <Group position="right" grow={isMobile}>
                         {!secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 loading={creatingSecret}
                                 type="submit"
@@ -602,7 +574,7 @@ const Home = () => {
 
                         {secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 onClick={onNewSecret}
                             >
@@ -628,13 +600,42 @@ const Home = () => {
             <Divider my="sm" variant="dashed" />
 
             <Stack spacing="xs">
-                <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
                 </Text>
 
-                <Text size="sm" align="center">
-                    <strong>Hemmelig</strong>, {t('home.app_name_meaning')}
+                <Text size={primaryFontStyle} align="center">
+                    <strong>SilentSpeaker</strong>, {t('home.app_name_meaning')}
                 </Text>
+            </Stack>
+            <Stack spacing="0" pt="xs">
+                <Text size={primaryFontStyle} align="center">
+                    <BitcoinIcon /> {t('home.donation_bitcoin_acc')}
+                </Text>
+                <Text size={primaryFontStyle} align="center" style={{ overflowWrap: 'break-word' }}>
+                    <XMRIcon /> {t('home.donation_xmr_acc')}
+                </Text>
+                <Text size={primaryFontStyle} align="center">
+                    <ETHIcon /> {t('home.donation_eth_acc')}
+                </Text>
+            </Stack>
+
+            <Stack pt={7} spacing={0}>
+                <Text size={primaryFontStyle} align="center">
+                    🙌 Together, we make it happen! 🙌
+                </Text>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Text size={primaryFontStyle} align="center">
+                        Special thanks for providing ideas to Cyron
+                    </Text>
+                    <img width={27} src={Cyronlogowithoutbackground} alt="Cyron logo" />
+                </div>
             </Stack>
         </Container>
     );

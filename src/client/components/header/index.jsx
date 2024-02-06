@@ -1,4 +1,4 @@
-import { Anchor, Burger, Button, Container, Grid, Group, Modal } from '@mantine/core';
+import { Anchor, Button, Container, Grid, Group, Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,10 +8,8 @@ import { Link, Navigate } from 'react-router-dom';
 import { userLogin, userLoginChanged } from '../../actions/';
 import { getCookie, refreshCookie } from '../../helpers/cookie';
 import Logo from './logo.jsx';
-import Nav from './nav';
 
 import { refresh } from '../../api/authentication.js';
-import style from './style.module.css';
 
 const Header = () => {
     const { t } = useTranslation();
@@ -106,18 +104,13 @@ const Header = () => {
             <Container>
                 <Grid columns={24} align="center">
                     <Grid.Col span={20}>
-                        <Anchor component={Link} to="/">
-                            <Logo className={style.logo} />
-                        </Anchor>
-                    </Grid.Col>
-
-                    <Grid.Col span={4}>
-                        <Group position="right">
-                            <Burger opened={isMenuOpened} onClick={toggle} aria-label={label} />
+                        <Group position="center">
+                            {/* <Burger opened={isMenuOpened} onClick={toggle} aria-label={label} /> */}
+                            <Anchor component={Link} to="/">
+                                <Logo />
+                            </Anchor>
                         </Group>
                     </Grid.Col>
-
-                    <Nav isLoggedIn={isLoggedIn} opened={isMenuOpened} toggle={toggle} />
                 </Grid>
             </Container>
         </>

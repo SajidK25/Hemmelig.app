@@ -1,5 +1,5 @@
-import { Anchor, AppShell, Footer, Group, Header, Text, useMantineTheme } from '@mantine/core';
-import { Link, Outlet } from 'react-router-dom';
+import { AppShell, Footer, Group, Header, Text, useMantineTheme } from '@mantine/core';
+import { Outlet } from 'react-router-dom';
 
 import { useMediaQuery } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
@@ -28,64 +28,14 @@ const ApplicationShell = () => {
                     })}
                 >
                     <Group position="center" spacing="xs">
-                        {!isMobile && (
-                            <>
-                                <Anchor
-                                    component={Link}
-                                    to="/account"
-                                    color="dimmed"
-                                    size="xs"
-                                    transform="uppercase"
-                                >
-                                    {t('account')}
-                                </Anchor>
-                                |
-                                <Anchor
-                                    component={Link}
-                                    to="/privacy"
-                                    color="dimmed"
-                                    size="xs"
-                                    transform="uppercase"
-                                >
-                                    Privacy
-                                </Anchor>
-                                |
-                                <Anchor
-                                    component={Link}
-                                    to="/terms"
-                                    color="dimmed"
-                                    size="xs"
-                                    transform="uppercase"
-                                >
-                                    Terms & Condition
-                                </Anchor>
-                                |
-                            </>
-                        )}
-                        <Anchor
-                            rel="noreferrer"
-                            href="https://lite.hemmelig.app"
-                            color="dimmed"
-                            size="xs"
-                            transform="uppercase"
+                        <Text
+                            weight="bold"
+                            className="radial-text-gradient"
+                            align="center"
+                            size="h2"
                         >
-                            Lite version
-                        </Anchor>
-                        |
-                        <Anchor
-                            rel="noreferrer"
-                            href="https://github.com/HemmeligOrg/Hemmelig.app"
-                            color="dimmed"
-                            size="xs"
-                            transform="uppercase"
-                        >
-                            <Text size="xs">
-                                <span role="img" aria-label="a heart">
-                                    ❤️
-                                </span>{' '}
-                                By Hemmelig
-                            </Text>
-                        </Anchor>
+                            Powered by OnionGangster®2k24
+                        </Text>
                     </Group>
                 </Footer>
             }
