@@ -30,7 +30,7 @@ services:
             traefik.http.middlewares.wwwtohttps.redirectregex.replacement: "https://$${1}"
             traefik.http.middlewares.wwwtohttps.redirectregex.permanent: true
             # traefik.http.routers.wl.middlewares: "default@file"
-            traefik.http.routers.silent-speaker.rule: "Host(`${PROJECT_DOMAIN}`) || Host(`www.wordlock-og.xyz`)"
+            traefik.http.routers.wl.rule: "Host(`${PROJECT_DOMAIN}`) || Host(`www.wordlock-og.xyz`)"
             traefik.http.routers.wl.tls.certresolver: "letsEncrypt"
             # traefik.http.routers.wl.tls.options: "modern@file"
             traefik.http.routers.wl.tls: "true"
