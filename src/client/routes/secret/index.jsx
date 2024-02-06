@@ -232,7 +232,7 @@ const Secret = () => {
 
                     {isSecretOpen && (
                         <Button
-                            color="hemmelig"
+                            color="blue"
                             leftIcon={<IconSquarePlus size={14} />}
                             component={Link}
                             to="/"
