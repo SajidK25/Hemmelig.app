@@ -44,22 +44,7 @@ const appRouter = createBrowserRouter(
                         return await getPublicSecrets(params?.username);
                     }}
                 />
-                <Route path="signin" element={<SignIn />} />
-                <Route path="signup" element={<SignUp />} />
-                <Route path="signout" element={<SignOut />} />
-                <Route path="privacy" element={<Privacy />} />
-                <Route path="terms" element={<Terms />} />
             </Route>
-            {/* <Route path="/account" element={<AdminShell />}>
-                <Route index element={<Account />} />
-                <Route path="account" element={<Account />} />
-                <Route path="secrets" element={<Secrets />} />
-                <Route path="instance-settings" element={<Settings />} />
-                <Route path="account-settings" element={<UserAccount />} />
-                <Route path="users" element={<Users />} />
-                <Route path="privacy" element={<Privacy />} />
-                <Route path="terms" element={<Terms />} />
-            </Route> */}
         </>
     )
 );
