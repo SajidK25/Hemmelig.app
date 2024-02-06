@@ -1,4 +1,4 @@
-import { Anchor, Button, Container, Grid, Group, Modal } from '@mantine/core';
+import { Anchor, Button, Container, Grid, Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -103,13 +103,15 @@ const Header = () => {
 
             <Container>
                 <Grid columns={24} align="center">
-                    <Grid.Col span={20}>
-                        <Group position="center">
-                            <Anchor component={Link} to="/">
-                                <Logo />
-                            </Anchor>
-                        </Group>
-                    </Grid.Col>
+                    <div
+                        style={{
+                            margin: 'auto',
+                        }}
+                    >
+                        <Anchor component={Link} to="/">
+                            <Logo />
+                        </Anchor>
+                    </div>
                 </Grid>
             </Container>
         </>
