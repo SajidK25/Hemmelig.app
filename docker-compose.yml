@@ -21,7 +21,7 @@ services:
             - SECRET_FILE_SIZE=4 # Set the total allowed upload file size in mb
             - SECRET_FORCED_LANGUAGE=en # Set the default language for the application
             - SECRET_JWT_SECRET=axf8Sg2Oaa1YcGj # Override this for the secret signin JWT tokens for log in
-            - SECRET_MAX_TEXT_SIZE=3072 # The max text size for the secret. Is set in kb. i.e. 256 for 256kb
+            - SECRET_MAX_TEXT_SIZE=5120 # The max text size for the secret. Is set in kb. i.e. 256 for 256kb
         labels:
             traefik.docker.network: "traefik-net"
             traefik.enable: "true"
