@@ -1,11 +1,11 @@
 services:
-    silent-speaker:
+    wordlock-og:
         build: 
             context: .
             dockerfile: Dockerfile
             network: host
-        container_name: silent-speaker-container
-        image: silent_speaker
+        container_name: wordlock-og-container
+        image: wordlock-og
         hostname: hemmelig
         init: true
         volumes:
