@@ -103,9 +103,8 @@ const Header = () => {
 
             <Container>
                 <Grid columns={24} align="center">
-                    <Grid.Col span={20}>
+                    <Grid.Col m="auto" span={20}>
                         <Group position="center">
-                            {/* <Burger opened={isMenuOpened} onClick={toggle} aria-label={label} /> */}
                             <Anchor component={Link} to="/">
                                 <Logo />
                             </Anchor>
