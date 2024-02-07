@@ -599,13 +599,13 @@ const Home = () => {
 
             <Divider my="sm" variant="dashed" />
 
-            <Stack spacing="xs">
+            <Stack spacing="0">
                 <Text size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
                 </Text>
 
                 <Text size={primaryFontStyle} align="center">
-                    SilentSpeaker, {t('home.app_name_meaning')}
+                    {t('home.app_name_meaning')}
                 </Text>
             </Stack>
             <Stack spacing="0" pt="xs">
