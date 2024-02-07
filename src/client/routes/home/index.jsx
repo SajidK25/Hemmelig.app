@@ -605,7 +605,7 @@ const Home = () => {
                 </Text>
 
                 <Text size={primaryFontStyle} align="center">
-                    <strong>SilentSpeaker</strong>, {t('home.app_name_meaning')}
+                    SilentSpeaker, {t('home.app_name_meaning')}
                 </Text>
             </Stack>
             <Stack spacing="0" pt="xs">
