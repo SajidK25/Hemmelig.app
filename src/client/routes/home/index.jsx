@@ -603,7 +603,7 @@ const Home = () => {
                 <Text size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
                     <Text align="center">Nothing is stored on our server. So sleep well 🧡</Text>
-                    <strong>WordLock</strong>, {t('home.app_name_meaning')}
+                    WordLock, {t('home.app_name_meaning')}
                 </Text>
             </Stack>
             <Stack spacing="0" pt="xs">
