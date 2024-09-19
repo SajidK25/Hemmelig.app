@@ -62,7 +62,7 @@ const SignIn = () => {
                     </Title>
 
                     <Text size="sm" align="center">
-                        Everything you need to access, and manage the Hemmelig secrets.
+                        Everything you need to access, and manage the SilentSpeaker secrets.
                     </Text>
 
                     {error && <ErrorBox message={error} />}

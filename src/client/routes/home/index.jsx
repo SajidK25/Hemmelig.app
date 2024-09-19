@@ -222,7 +222,7 @@ const Home = () => {
         if (navigator.share) {
             navigator
                 .share({
-                    title: 'hemmelig.app',
+                    title: 'SilentSpeaker.org',
                     text: t('home.get_your_secret'),
                     url: getSecretURL(),
                 })
