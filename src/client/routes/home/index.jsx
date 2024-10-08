@@ -600,42 +600,13 @@ const Home = () => {
             <Divider my="sm" variant="dashed" />
 
             <Stack spacing="0">
-                <Text size={primaryFontStyle} align="center">
-                    {t('home.link_only_works_once')}
-                </Text>
-
-                <Text size={primaryFontStyle} align="center">
-                    {t('home.app_name_meaning')}
-                </Text>
             </Stack>
             <Stack spacing="0" pt="xs">
-                <Text size={primaryFontStyle} align="center">
-                    <BitcoinIcon /> {t('home.donation_bitcoin_acc')}
-                </Text>
-                <Text size={primaryFontStyle} align="center" style={{ overflowWrap: 'break-word' }}>
-                    <XMRIcon /> {t('home.donation_xmr_acc')}
-                </Text>
-                <Text size={primaryFontStyle} align="center">
-                    <ETHIcon /> {t('home.donation_eth_acc')}
-                </Text>
+
             </Stack>
 
             <Stack pt={7} spacing={0}>
-                <Text size={primaryFontStyle} align="center">
-                    🙌 Together, we make it happen! 🙌
-                </Text>
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}
-                >
-                    <Text size={primaryFontStyle} align="center">
-                        Special thanks for providing ideas to Cyron
-                    </Text>
-                    <img width={27} src={Cyronlogowithoutbackground} alt="Cyron logo" />
-                </div>
+                
             </Stack>
         </Container>
     );
