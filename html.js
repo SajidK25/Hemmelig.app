@@ -15,6 +15,7 @@ export default `<!DOCTYPE html>
         <link rel="icon" href="./public/icons/favicon.ico">
         <link rel="manifest" href="/site.webmanifest">
         <!-- Primary Meta Tags -->
+        <meta name="robots" content="noindex">
         <meta name="title" content="Paste a password, confidential message, or private data." />
         <meta
             name="description"
@@ -23,7 +24,7 @@ export default `<!DOCTYPE html>
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.silentspeaker.org//" />
+        <meta property="og:url" content="https://www.silentspeaker.org/" />
         <meta
             property="og:title"
             content="Paste a password, confidential message, or private data."
